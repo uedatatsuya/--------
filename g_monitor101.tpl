@@ -1078,31 +1078,6 @@
 			<p id="slideword" class="absolute infohaba3"></p>
 		</div>
 
-		<!--	<span id="header"><a href="javascript:location.reload(true);"><img src="./images/yomikomi.png" width="100px" height="100px"></a></span>-->
-
-
-		<!--
-		<table style="margin: 40px auto;" border="0">
-		<tbody>
-			<tr>
-			<td>
-				<img src="./images/g3_rogo2.png">
-			</td>
-
-			</tr>
-		</tbody>
-		</table>-->
-
-		<!--   <table style="margin-left:auto; margin-right:auto;" border="0">
-		<tbody>
-			<tr>
-				<td>
-				<img src="./images/giza.png">
-				</td>
-			</tr>
-			</tbody>
-		</table>
-		<br>-->
 
 
 		<span id="all">
@@ -1111,12 +1086,11 @@
 					<!--    <div class="side-corner-tag" style="height: 100vh;">ここ高さそろえ-->
 					<div class="box">
 
-
 						<table class="marukakoi" style="width: 100%; ">
 							<tr>
 								<td colspan="4" rowspan="2" class="maru" valign="top" id="maru" align="right"><input id="close" type="button" class="button" value="閉じる" style="display:none; " onclick="iframeClose();">
 
-									<!--		<div id="waku"><canvas id="container" name="dFrame"  height="1500" width="1200"></canvas></div><br>-->
+									<!--<div id="waku"><canvas id="container" name="dFrame"  height="1500" width="1200"></canvas></div><br>-->
 
 									<input type="hidden" name="org-width" id="org-width" value="" />
 									<input type="hidden" name="org-height" id="org-height" value="" />
