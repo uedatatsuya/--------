@@ -54,16 +54,19 @@
 					<td>現場住所(設置場所)</td>
 					<td>__Basyo__</td>
 				</tr>
+				<tr>
+					<td>工期</td>
+					<td>__startdate__~__enddate__</td>
+				</tr>
 				<!--<tr><td>工事開始日</td><td>__KojiStart__</td></tr>
-<tr><td>工事終了日</td><td>__KojiEnd__</td></tr>
+				<tr><td>工事終了日</td><td>__KojiEnd__</td></tr>
 
-__IfHensyu__
-<tr><td>モニター名</td><td>__MonitorName__</td></tr>
-<tr><td>カメラ１</td><td>__CameraURL1__</td></tr>
-<tr><td>カメラ２</td><td>__CameraURL2__</td></tr>
-__IfHensyu__
--->
-
+				__IfHensyu__
+				<tr><td>モニター名</td><td>__MonitorName__</td></tr>
+				<tr><td>カメラ１</td><td>__CameraURL1__</td></tr>
+				<tr><td>カメラ２</td><td>__CameraURL2__</td></tr>
+				__IfHensyu__
+				-->
 
 				<!-- <tr><td>天気場所コード</td><td width="400">__wTenkiCD__....</td></tr> -->
 
@@ -81,6 +84,8 @@ __IfHensyu__
 			<input type="hidden" name="KojiStart" value="__KojiStart__">
 			<input type="hidden" name="KojiEnd" value="__KojiEnd__">
 			<input type="hidden" name="TenkiCD" value="__TenkiCD__">
+			<input type="hidden" name="startdate" value="__startdate__">
+			<input type="hidden" name="enddate" value="__enddate__">
 
 			<input type="hidden" name="work" value="1">
 			<input type=hidden name="rKey" value="__rKey__">

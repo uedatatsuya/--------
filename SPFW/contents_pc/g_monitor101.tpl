@@ -224,7 +224,7 @@
 			text-align: center;
 			line-height: 44px;
 			font-size: 150%;
-			font-color: #FFFFFF;
+			color: #FFFFFF;
 			background-color: #FFF;
 		}
 
@@ -232,7 +232,7 @@
 			text-align: center;
 			line-height: 44px;
 			font-size: 150%;
-			font-color: #FFFFFF;
+			color: #FFFFFF;
 			background-color: #FFF;
 		}
 
@@ -240,7 +240,7 @@
 			text-align: center;
 			line-height: 44px;
 			font-size: 150%;
-			font-color: #FFFFFF;
+			color: #FFFFFF;
 			background-color: #FFF;
 		}
 
@@ -285,6 +285,8 @@
 		window.onload = function () {
 
 			var GenbaCD = "__GenbaCD__";
+
+			iframeClose();
 
 
 			/*
@@ -331,7 +333,8 @@
 			var nowHour = set2fig(nowTime.getHours());
 			var nowMin = set2fig(nowTime.getMinutes());
 			var nowSec = set2fig(nowTime.getSeconds());
-			var msg = "<font size=6 color=black>" + nowHour + ":" + nowMin + ":" + nowSec + "</font>";
+			// var msg = nowHour + ":" + nowMin + ":" + nowSec;
+			var msg = "<font size=10 color=black>" + nowHour + ":" + nowMin + ":" + nowSec + "</font>";
 
 			document.getElementById("RealtimeClockArea").innerHTML = msg;
 
@@ -399,7 +402,6 @@
 
 
 
-
 			var canvas = document.getElementById('jpg');
 			if (!canvas || !canvas.getContext) { return false; }
 			var ctx = canvas.getContext('2d');
@@ -441,16 +443,11 @@
 
 			img.src = url;
 
-
-
-
 			var bZoom = true;
 			var w = 450;
 			var h = 400;
 			var drawing = false;
 			var oldPos;
-
-
 
 
 			// CanvasとContextを初期化する
@@ -628,8 +625,6 @@
 							zoom = d1 / d0;
 
 
-
-
 							//画像をズーム
 							$("#jpg").css({ 'transform': 'scale(' + zoom + ')', '-webkit-transform': 'scale(' + zoom + ')', '-moz-transform': 'scale(' + zoom + ')', '-ms-transform': 'scale(' + zoom + ')' });
 
@@ -715,12 +710,6 @@
 
 				isDrawing = false;
 			});
-
-
-
-
-
-
 
 		}//function jpg ここまで
 
@@ -888,11 +877,9 @@
 				//document.getElementById("imgsrc").src = URL;
 			}
 
-
 			// document.getElementById("StartFrame").style.display = "none";//初期表示の2iframe消す
 			document.getElementById("StartFrame2").style.display = "none";//初期表示の右側iframe消す
 			//ueda edit
-
 
 			document.getElementById("FramePrint" + no).style.display = "block";
 			document.getElementById("close").style.display = "block";
@@ -1047,6 +1034,8 @@
 			document.getElementById("StartFrame").style.display = "flex";
 			//document.getElementById("FramePrint").style.display = "none";
 
+			//edit ueda
+			document.getElementById("StartFrame2").style.display = "block";
 
 			var ComLoop = "__ComCnt__";
 
@@ -1059,25 +1048,26 @@
 
 		}
 
-
 	</script>
 
 </head>
-
-
 
 <body text="__STextColor__" link="__SLinkColor__" alink="__SALinkColor__" vlink="__SVLinkColor__" style="position:fixed;">
 	<div class="content">
 		<!--TOP-->
 
-		<div class="relative" id="head">
-			<!-- <a href="javascript:location.reload(true);"><img src="./images/header.png" id="headerimg"></a> -->
-			<!-- <a href="javascript:reload();"><img src="./images/header.png" id="headerimg"></a> -->
-			<a href="javascript:reload();"><img src="./images/header3.png" id="headerimg"></a>
-			<!--<p class="absolute infohaba ">__Telop__</p>-->
-			<p id="slideword" class="absolute infohaba3"></p>
-		</div>
+		<div class="relative" id="head" style="position: relative;">
+			<a href="javascript:reload();">
+				<img src="./images/header3.png" id="headerimg">
+			</a>
+			<!-- <p id="slideword" class="absolute infohaba3"></p> -->
+			<div style="position: absolute;top:48px;left:16px;font-size: 50px;color: #252222;">__Telop__　インターホン設備改修工事　工期：__startdate__~　__enddate__
+				<!-- <div style="position: absolute;top:10px;left:2px;font-size: 25px;color: #fff;">__Telop__~　　インターホン工事　2022年 4月18日（月）~　2022年10月21日（金） -->
+			</div>
 
+			<div>__b__</div>
+
+		</div>
 
 
 		<span id="all">
@@ -1089,8 +1079,6 @@
 						<table class="marukakoi" style="width: 100%; ">
 							<tr>
 								<td colspan="4" rowspan="2" class="maru" valign="top" id="maru" align="right"><input id="close" type="button" class="button" value="閉じる" style="display:none; " onclick="iframeClose();">
-
-									<!--<div id="waku"><canvas id="container" name="dFrame"  height="1500" width="1200"></canvas></div><br>-->
 
 									<input type="hidden" name="org-width" id="org-width" value="" />
 									<input type="hidden" name="org-height" id="org-height" value="" />
@@ -1105,32 +1093,27 @@
 										<span id="FramePrint__cNo__" class="inner"><iframe src='http://www3.489501.jp/g04/__mFolderPic__' class="iframes" name="cFrame" id="iframe" scrolling="auto" messages=0 marginwidth="0" marginheight="0" frameborder="0" style="border:none; height:2000px; width:100%;"></iframe></span>
 										__ComLoop__
 									</span>
-									<!-- __ComLoop__
-									<div id="FramePrint__cNo__" style="display:none"><iframe src='http://www3.489501.jp/g04/__mFolderPic__' class="iframes" name="cFrame" id="iframe" viewrect=10,10,800,0 scrolling="auto" messages=0 marginwidth="0" marginheight="0" frameborder="0" style="border:none; height:2000px; width:100%;"></iframe></div>
-									__ComLoop__ -->
-
 
 									<div id=shopcd>__ShopCD__</div>
 									<div id=fileextension>__FileExtension__</div>
 									<div id="image2"><img src="http://www3.489501.jp/g04/__FirstPic__" id="imgsrc"></div>
 
-
+								</td>
+							</tr>
 					</div>
 
 
-
-					</td>
-
 					<!-- 時計と右端のクリック可能ファイル一覧 レイアウト表示 -->
-					<td valign="top" align="left" width="315px">
+					<td valign="top" align="left" width="600px">
+						<!-- <td valign="top" align="left" width="315px"> -->
 
 						<span id="eturan">
 							<table>
 								<!--時計-->
 								<tr>
 									<td align="center">
-										<p id="RealtimeClockArea">
-											<font size=6></font>
+										<p id="RealtimeClockArea" style="font-size: 28.5px;">
+											<!-- <font size=6></font> -->
 										</p>
 									</td>
 								</tr>
@@ -1141,30 +1124,30 @@
 								__ComLoop__
 						</span>
 
-						<table>
+						<!-- <table> -->
 
-							<!--<tr><td><a class="button camera1" id="camera1" href="javascript:Camera('camera1','./g04_camera1.php?GenbaCD=__GenbaCD__')" target="cFrame"></a></td>
+						<!--<tr><td><a class="button camera1" id="camera1" href="javascript:Camera('camera1','./g04_camera1.php?GenbaCD=__GenbaCD__')" target="cFrame"></a></td>
 					            <td><a class="button camera2" id="camera2" href="javascript:Camera('camera2','./g04_camera2.php?GenbaCD=__GenbaCD__')" target="cFrame"></a></td></tr>-->
 
 
-							<!--				<tr>
+						<!--				<tr>
 						    <td><a class="button print" id="btn_print" href="javascript:Print()"></a></td>
 							</tr>-->
 
-							<!-- QRコード表示 -->
-							<!--						    <td colspan="2"><a class="button1 qr" id="qr" ></a></td>-->
-							<!-- <tr>
+						<!-- QRコード表示 -->
+						<!--						    <td colspan="2"><a class="button1 qr" id="qr" ></a></td>-->
+						<!-- <tr>
 								<td id="qr" colspan="2"><img src="http://chart.googleapis.com/chart?chs=130x130&cht=qr&chl=http://www3.489501.jp/g04/g_monitor3.php?GenbaCD=__GenbaCD__" / style="margin-left:7px"></td>
 							</tr> -->
 
-							<!-- 天気表示 -->
-							<!-- <tr>
+						<!-- 天気表示 -->
+						<!-- <tr>
 								<td colspan="2"><iframe src="http://www3.489501.jp/g04/g_weather.php?GenbaCD=__GenbaCD__" height="150px" scrolling=no frameborder="0"></iframe></td>
 							</tr> -->
 
-							<!--<tr><td><img src="./images/banner2.gif"></td></tr>-->
+						<!--<tr><td><img src="./images/banner2.gif"></td></tr>-->
 
-						</table>
+						<!-- </table> -->
 
 					</td>
 
@@ -1187,7 +1170,7 @@
 
 	<!--<li>__sPic__</li>-->
 
-	<div style="width:100%; display: flex; background-color: #808080;">
+	<!-- <div style="width:100%; display: flex; background-color: #808080;">
 
 		<div style="width:1000px; height:2300px; background-color: #808080;"></div>
 
@@ -1195,7 +1178,7 @@
 			<iframe id="fslide" src="g_slide.php?GenbaCD=__GenbaCD__" alt='' style="border:none;  height:2300px; width:4000px; display:none;" frameborder="1" scrolling="no"></iframe>
 		</div>
 
-	</div>
+	</div> -->
 
 	<!--</ul></div>-->
 

@@ -68,6 +68,13 @@
 					<td align="left"><input type=text name="MonitorName" value="__MonitorName__"></td>
 				</tr>
 
+				<tr>
+					<td bgcolor="lightgoldenrodyellow">工期</td>
+					<td align="left">
+						<input type=date name="startdate" value="__startdate__">~<input type="date" name="enddate" id="" value="__enddate__">
+					</td>
+				</tr>
+
 
 				<!--<tr><td bgcolor="lightgoldenrodyellow">カメラ1URL</td><td align="left" ><input type=text name="CameraURL1" value="__CameraURL1__"  size=70 ></td></tr>
 <tr><td bgcolor="lightgoldenrodyellow">カメラ2URL</td><td align="left" ><input type=text name="CameraURL2" value="__CameraURL2__"  size=70 ></td></tr>
